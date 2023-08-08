@@ -2,7 +2,7 @@
 """base class, parent class that child class enherit from it"""
 import models
 import datetime
-from uuid import uuid4
+import uuid
 
 
 class BaseModel:
@@ -10,7 +10,7 @@ class BaseModel:
     all attributes and
     methodes for other class
     """
-    def  __init__(self):
+    def  __init__(self, *args, **kwargs):
         """ intialization of the magic init method.
 
         args:
@@ -21,15 +21,24 @@ class BaseModel:
             created_id: created datetime
             updated_at: updated datetime
         """
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if len(kwargs) > 0:
+             for k, v in kwargs.items():
+                 if k == "__class__":
+                     pass
+                 elif k in ("created_at", "updated_at"):
+                     self.__dict__[k] = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
+                 else:
+                     self.__dict__[k] = v
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.datetime.now()
+            self.updated_at = datetime.datetime.now()
 
     def save(self):
         """updates the public instance attribute 
         updated_at with the current datetime
         """
-        self.updated_at = datetime.now()
+        self.updated_at = datetime.datetime.now()
 
     def to_dict(self):
         """it a public methode returns a dictionary containing 
