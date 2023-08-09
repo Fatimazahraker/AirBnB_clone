@@ -44,10 +44,10 @@ class FileStorage:
         classe = {'BaseModel': BaseModel}
 
         try:
+            dic = {}
             with open(FileStorage.__file_path, "r", encoding="utf_8") as fi:
-                dic = json.loads(fi.read())
+                dic = json.load(fi)
                 for key, value in dic.items():
-                    obj = models.classes[value["__class__"]](**value)
-                    FileStorage.__objects[key] = obj
+                    self.all()[key] = classes[val['__class__']](**val)
         except FileNotFoundError:
             pass
