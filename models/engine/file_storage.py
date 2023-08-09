@@ -20,7 +20,7 @@ class FileStorage:
         Public instance methods
         sets in __objects the obj with key <obj class name>.id
         """
-        frmat = f"{obj.__class__.__name__}.{obj.id}"
+        frmat = "{}.{}".format(obj.__class__.__name__, obj.id)
         FileStorage.__objects[frmat] = obj
 
     def save(self):
@@ -28,11 +28,9 @@ class FileStorage:
         Public instance methods
         serializes __objects to the JSON file (path: __file_path)
         """
-        dictobj = {}
-        for k, v in FileStorage.__objects.items():
-            dictobj = v.to_dict()
+        dictobj = {key: value.to_dict() for key, value in FileStorage.__objects.items()}
         with open(FileStorage.__file_path, "w", encoding="utf_8") as file:
-            file.write(json.dumps(dictobj))
+            json.dump(dictobj, file)
 
     def  reload(self):
         """
@@ -41,13 +39,17 @@ class FileStorage:
         file (__file_path) exists ; otherwise, do nothing. If the 
         file doesn’t exist, no exception should be raised)
         """
-        classe = {'BaseModel': BaseModel}
+        classes = {'BaseModel': BaseModel}
 
         try:
             dic = {}
             with open(FileStorage.__file_path, "r", encoding="utf_8") as fi:
                 dic = json.load(fi)
                 for key, value in dic.items():
-                    self.all()[key] = classes[val['__class__']](**val)
+                    cls_name = value.get['__class__']
+                    if cls_name in classes:
+                        cls = classes[cls_name]
+                        obj = cls(**value)
+                        self.all()[key] = obj
         except FileNotFoundError:
             pass
