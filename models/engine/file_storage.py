@@ -51,5 +51,5 @@ class FileStorage:
                         cls = classes[cls_name]
                         obj = cls(**value)
                         self.all()[key] = obj
-        except FileNotFoundError:
+        except (FileNotFoundError, json.decoder.JSONDecodeError):
             pass
