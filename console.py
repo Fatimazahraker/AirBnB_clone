@@ -23,8 +23,23 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """hadle the case of empty line or ENTRER"""
+        """handle the case of empty line or ENTRER"""
         pass
+
+    dataclass = { 'BaseModel': BaseModel }
+
+    def do_create (self, argm):
+        """cmd create new intance and save it to json file"""
+        if not argm:
+            print("** class name missing **")
+            return
+        elif argm not in HBNBCommand.dataclass.keys():
+            print("** class doesn't exist **")
+            return
+        else:
+            new = HBNBCommand.dataclass[arg]()
+            models.storage.save()
+            print(new.id)
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

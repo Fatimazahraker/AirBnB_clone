@@ -26,9 +26,9 @@ class BaseModel:
                  if k == "__class__":
                      pass
                  elif k in ("created_at", "updated_at"):
-                     self.__dict__[k] = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
+                      setattr(self, k, datetime.datetime.fromisoformat(v))
                  else:
-                     self.__dict__[k] = v
+                     setattr(self, k, v)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.datetime.now()
