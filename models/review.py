@@ -10,7 +10,7 @@ class Review(BaseModel):
     Attributes:
         place_id (str):  Place id.
         user_id (str):  User id.
-        text (str): text of the review.
+        text (str): text of review.
     """
 
     place_id = ""
