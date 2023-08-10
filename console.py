@@ -42,6 +42,27 @@ class HBNBCommand(cmd.Cmd):
             models.storage.save()
             print(new.id)
 
+    def do_show (self, argm):
+        """ cmd print str represnetation of instace"""
+        if not argm:
+            print("** class name missing **")
+            return
+        else:
+            argms = argm.split(" ")
+            if argms[0] not in HBNBCommand.dataclass.keys():
+                print("** class doesn't exist **")
+                return
+            elif len(argms) == 1:
+                print("** instance id is missing **")
+                return
+            else:
+                k = f"{argms[0]}.{argms[1]}"
+                try:
+                    print(storage._FileStorage__objects[k])
+                except KeyError:
+                    print("** no instance found **")
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
 
