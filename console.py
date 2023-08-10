@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ console programe as entry point of command interpreter"""
+
 import cmd
 import sys
 from models.base_model import BaseModel
