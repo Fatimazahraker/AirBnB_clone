@@ -7,7 +7,7 @@ import uuid
 
 
 class BaseModel:
-    """ it is a basemodel calss that define 
+    """ it is  basemodel calss that define 
     all attributes and
     methodes for other class
     """
