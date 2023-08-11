@@ -17,3 +17,4 @@ class Review(BaseModel):
     user_id = ""
     text = ""
 
+
