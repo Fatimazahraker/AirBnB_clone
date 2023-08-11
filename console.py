@@ -30,7 +30,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """handle the case of empty line or ENTRER"""
+        """handle  case of empty line or ENTRER"""
         pass
 
     dataclass = {
