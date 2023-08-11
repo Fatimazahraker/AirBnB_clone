@@ -37,7 +37,7 @@ class BaseModel:
             models.storage.new(self)
 
     def save(self):
-        """updates the public instance attribute 
+        """updates public instance attribute 
         updated_at with the current datetime
         """
         self.updated_at = datetime.datetime.now()
