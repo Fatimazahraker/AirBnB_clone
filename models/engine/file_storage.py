@@ -46,7 +46,7 @@ class FileStorage:
             with open(FileStorage.__file_path, "r", encoding="utf_8") as fi:
                 dic = json.load(fi)
                 for key, value in dic.items():
-                    cls_name = value.get['__class__']
+                    cls_name = value['__class__']
                     if cls_name in classes:
                         cls = classes[cls_name]
                         obj = cls(**value)
