@@ -114,8 +114,7 @@ class HBNBCommand(cmd.Cmd):
                 plist.append(str(value))
 
         print(plist)
-
-def do_update(self, args):
+    def do_update(self, args):
         """ Updates a certain object with new info """
         c_name = c_id = att_name = att_val = kwargs = ''
 
@@ -197,6 +196,17 @@ def do_update(self, args):
                 new_dict.__dict__.update({att_name: att_val})
                 new_dict.save()
 
+    def do_count(self, args):
+        """Count current number of class instances"""
+        count = 0
+        for k, v in storage._FileStorage__objects.items():
+            if args == k.split('.')[0]:
+                count += 1
+        print(count)
+
+    def help_count(self):
+        """ """
+        print("Usage: count <class_name>")
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
 
