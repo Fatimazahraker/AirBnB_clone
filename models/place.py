@@ -8,7 +8,7 @@ class Place(BaseModel):
     """class represent place .
 
     Attr:
-        city_id : The id of City.
+        city_id :  id of City.
         user_id : The id of User.
         name : the place's name.
         description: place description.
