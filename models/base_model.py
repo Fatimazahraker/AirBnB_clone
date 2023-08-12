@@ -21,6 +21,11 @@ class BaseModel:
             created_id: created datetime
             updated_at: updated datetime
         """
+        self.id = str(uuid.uuid4())
+        self.created_at = datetime.datetime.now()
+        self.updated_at = datetime.datetime.now()
+        models.storage.new(self)
+
         if len(kwargs) > 0:
             for k, v in kwargs.items():
                 if k == "__class__":
@@ -29,11 +34,6 @@ class BaseModel:
                     setattr(self, k, datetime.datetime.fromisoformat(v))
                 else:
                     setattr(self, k, v)
-        else:
-            self.id = str(uuid.uuid4())
-            self.created_at = datetime.datetime.now()
-            self.updated_at = datetime.datetime.now()
-            models.storage.new(self)
 
     def save(self):
         """updates public instance attribute
