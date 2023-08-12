@@ -16,14 +16,11 @@ from models.review import Review
 class HBNBCommand(cmd.Cmd):
     """ class of command interpreter"""
 
-    if sys.stdin.isatty():
-        prompt = '(hbnb)'
-    else:
-        prompt = ''
+    prompt = "(hbnb) "
 
     def do_quit(self, comnd):
         """cmd to exit the programm"""
-        exit()
+        return True
 
     def do_EOF(self, arg):
         """ cmd handle 'ctrl + z' or 'ctrl + d'"""
@@ -212,4 +209,4 @@ class HBNBCommand(cmd.Cmd):
 
 
 if __name__ == '__main__':
-    HBNBCommand().cmdloopi()
+    HBNBCommand().cmdloop()
