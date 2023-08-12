@@ -9,6 +9,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 
+
 class FileStorage:
     """ class that serialize instance to json
     and deserialize json file to instance
@@ -34,15 +35,15 @@ class FileStorage:
         Public instance methods
         serializes __objects to the JSON file (path: __file_path)
         """
-        dictobj = {key: value.to_dict() for key, value in FileStorage.__objects.items()}
+        dictobj = {k: v.to_dict() for k, v in FileStorage.__objects.items()}
         with open(FileStorage.__file_path, "w", encoding="utf_8") as file:
             json.dump(dictobj, file)
 
-    def  reload(self):
+    def reload(self):
         """
         Public instance methods
-        deserializes the JSON file to __objects (only if the JSON 
-        file (__file_path) exists ; otherwise, do nothing. If the 
+        deserializes the JSON file to __objects (only if the JSON
+        file (__file_path) exists ; otherwise, do nothing. If the
         file doesn’t exist, no exception should be raised)
         """
         classes = {
