@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Defines  HBnB console."""
+
 import cmd
 import re
 from shlex import split
@@ -18,21 +19,21 @@ def parse(arg):
     brackets = re.search(r"\[(.*?)\]", arg)
     if curly_braces is None:
         if brackets is None:
-            return [i.strip(",") for i in split(arg)]
+            return [m.strip(",") for m in split(arg)]
         else:
             lexer = split(arg[:brackets.span()[0]])
-            retl = [i.strip(",") for i in lexer]
+            retl = [m.strip(",") for m in lexer]
             retl.append(brackets.group())
             return retl
     else:
         lexer = split(arg[:curly_braces.span()[0]])
-        retl = [i.strip(",") for i in lexer]
+        retl = [m.strip(",") for m in lexer]
         retl.append(curly_braces.group())
         return retl
 
 
 class HBNBCommand(cmd.Cmd):
-    """Defines the HolbertonBnB command interpreter.
+    """Defines HolbertonBnB command interpreter.
 
     Attributes:
         prompt (str): The command prompt.
