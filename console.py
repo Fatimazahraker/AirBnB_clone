@@ -12,9 +12,10 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
     """ class of command interpreter"""
-    
+
     if sys.stdin.isatty():
         prompt = '(hbnb)'
     else:
@@ -39,7 +40,7 @@ class HBNBCommand(cmd.Cmd):
                     'Review': Review
                 }
 
-    def do_create (self, argm):
+    def do_create(self, argm):
         """cmd create new intance and save it to json file"""
         if not argm:
             print("** class name missing **")
@@ -52,7 +53,7 @@ class HBNBCommand(cmd.Cmd):
             models.storage.save()
             print(new.id)
 
-    def do_show (self, argm):
+    def do_show(self, argm):
         """ cmd print str represnetation of instace"""
         if not argm:
             print("** class name missing **")
@@ -71,7 +72,7 @@ class HBNBCommand(cmd.Cmd):
                     print(storage._FileStorage__objects[k])
                 except KeyError:
                     print("** no instance found **")
-    
+
     def do_destroy(self, argm):
         """cmd that delete  instance based on id"""
         if not argm:
@@ -114,6 +115,7 @@ class HBNBCommand(cmd.Cmd):
                 plist.append(str(value))
 
         print(plist)
+
     def do_update(self, args):
         """ Updates  certain object with new info """
         c_name = c_id = att_name = att_val = kwargs = ''
@@ -207,7 +209,7 @@ class HBNBCommand(cmd.Cmd):
     def help_count(self):
         """ """
         print("Usage: count <class_name>")
-if __name__ == '__main__':
-    HBNBCommand().cmdloop()
 
-    
+
+if __name__ == '__main__':
+    HBNBCommand().cmdloopi()
