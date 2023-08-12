@@ -37,7 +37,7 @@ class HBNBCommand(cmd.Cmd):
     """Defines HolbertonBnB command interpreter.
 
     Attributes:
-        prompt (str): The command prompt.
+        prompt (str):  command prompt.
     """
 
     prompt = "(hbnb) "
@@ -52,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
     }
 
     def emptyline(self):
-        """Do nothing upon receiving an empty line."""
+        """Do nothing upon receiving  empty line."""
         pass
 
     def default(self, arg):
@@ -81,7 +81,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_EOF(self, arg):
-        """EOF signal to exit the program."""
+        """EOF signal to exit program."""
         print("")
         return True
 
@@ -150,7 +150,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_count(self, arg):
         """Usage: count <class> or <class>.count()
-        Retrieve the number of instances of a given class."""
+        Retrieve  number of instances of a given class."""
         argl = parse(arg)
         count = 0
         for obj in storage.all().values():
@@ -162,8 +162,8 @@ class HBNBCommand(cmd.Cmd):
         """Usage: update <class> <id> <attribute_name> <attribute_value> or
        <class>.update(<id>, <attribute_name>, <attribute_value>) or
        <class>.update(<id>, <dictionary>)
-        Update a class instance of a given id by adding or updating
-        a given attribute key/value pair or dictionary."""
+        Update  class instance of a given id by adding or updating
+         given attribute key/value pair or dictionary."""
         argl = parse(arg)
         objdict = storage.all()
 
