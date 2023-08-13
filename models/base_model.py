@@ -43,8 +43,7 @@ class BaseModel:
         rdict["__class__"] = self.__class__.__name__
         return rdict
 
-   
-   def __str__(self):
+    def __stri__(self):
         """return the and print the strig represnetaion of dictionamry"""
         clname = self.__class__.__name__
         return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
