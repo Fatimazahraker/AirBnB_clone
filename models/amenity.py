@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""definition of class called amenity."""
+"""class name is amenity definition"""
 
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """amenity class.
+    """ class amenity.
 
-    Attr:
-        name (str): string format represent name .
+    Attribute:
+        name : it a nme with string fomat.
     """
 
     name = ""
