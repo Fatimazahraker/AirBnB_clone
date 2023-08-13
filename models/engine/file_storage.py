@@ -46,7 +46,7 @@ class FileStorage:
                     cls_name = p["__class__"]
                     del p["__class__"]
                     self.new(eval(cls_name)(**p))
-        except FileNotFoundError:
+        except (FileNotFoundError, json.decoder.JSONDecodeError):
             return
 
 
