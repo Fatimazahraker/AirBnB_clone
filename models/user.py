@@ -7,10 +7,10 @@ class User(BaseModel):
     """class  User.
 
     Attrs:
-        email:  email of the user.
-        password: password of the user.
-        first_name: first name of the user.
-        last_name: last name of the user.
+        email: user 's email.
+        password: user 's password .
+        first_name:user 's  first name.
+        last_name: last name.
     """
 
     email = ""
