@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Defines State class."""
+"""state lass."""
 
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """class state.
+    """represent class state.
 
     Attr:
         name: public class attr called name .
