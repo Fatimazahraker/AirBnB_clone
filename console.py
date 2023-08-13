@@ -1,11 +1,5 @@
 #!/usr/bin/python3
-"""Defines  HBnB console."""
-
-
-
-from models.place import Place
-from models.amenity import Amenity
-from models.review import Review
+"""Defines the HBnB console."""
 import cmd
 import re
 from shlex import split
@@ -14,7 +8,9 @@ from models.base_model import BaseModel
 from models.user import User
 from models.state import State
 from models.city import City
-
+from models.place import Place
+from models.amenity import Amenity
+from models.review import Review
 
 
 def parse(arg):
@@ -22,24 +18,24 @@ def parse(arg):
     brackets = re.search(r"\[(.*?)\]", arg)
     if curly_braces is None:
         if brackets is None:
-            return [m.strip(",") for m in split(arg)]
+            return [i.strip(",") for i in split(arg)]
         else:
             lexer = split(arg[:brackets.span()[0]])
-            retl = [m.strip(",") for m in lexer]
+            retl = [i.strip(",") for i in lexer]
             retl.append(brackets.group())
             return retl
     else:
         lexer = split(arg[:curly_braces.span()[0]])
-        retl = [m.strip(",") for m in lexer]
+        retl = [i.strip(",") for i in lexer]
         retl.append(curly_braces.group())
         return retl
 
 
 class HBNBCommand(cmd.Cmd):
-    """Defines HolbertonBnB command interpreter.
+    """Defines the HolbertonBnB command interpreter.
 
     Attributes:
-        prompt (str):  command prompt.
+        prompt (str): The command prompt.
     """
 
     prompt = "(hbnb) "
@@ -54,7 +50,7 @@ class HBNBCommand(cmd.Cmd):
     }
 
     def emptyline(self):
-        """Do nothing upon receiving  empty line."""
+        """Do nothing upon receiving an empty line."""
         pass
 
     def default(self, arg):
@@ -83,7 +79,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_EOF(self, arg):
-        """EOF signal to exit program."""
+        """EOF signal to exit the program."""
         print("")
         return True
 
@@ -152,7 +148,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_count(self, arg):
         """Usage: count <class> or <class>.count()
-        Retrieve  number of instances of a given class."""
+        Retrieve the number of instances of a given class."""
         argl = parse(arg)
         count = 0
         for obj in storage.all().values():
@@ -164,8 +160,8 @@ class HBNBCommand(cmd.Cmd):
         """Usage: update <class> <id> <attribute_name> <attribute_value> or
        <class>.update(<id>, <attribute_name>, <attribute_value>) or
        <class>.update(<id>, <dictionary>)
-        Update  class instance of a given id by adding or updating
-         given attribute key/value pair or dictionary."""
+        Update a class instance of a given id by adding or updating
+        a given attribute key/value pair or dictionary."""
         argl = parse(arg)
         objdict = storage.all()
 
