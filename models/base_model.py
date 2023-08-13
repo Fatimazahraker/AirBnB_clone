@@ -5,6 +5,7 @@ from datetime import datetime
 import models
 from uuid import uuid4
 
+
 class BaseModel:
     """Represents the BaseModel of  HBnB project."""
 
