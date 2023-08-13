@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 """Defines  HBnB console."""
+
+
+
 from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
@@ -11,6 +14,7 @@ from models.base_model import BaseModel
 from models.user import User
 from models.state import State
 from models.city import City
+
 
 
 def parse(arg):
@@ -75,7 +79,7 @@ class HBNBCommand(cmd.Cmd):
         return False
 
     def do_quit(self, arg):
-        """Quit command to exit  program."""
+        """Quit command to exit the program."""
         return True
 
     def do_EOF(self, arg):
