@@ -8,7 +8,7 @@ class State(BaseModel):
     """represent class state.
 
     Attr:
-        name: public class attr called name .
+        name:it a class attribute name .
     """
 
     name = ""
