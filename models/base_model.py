@@ -5,7 +5,6 @@ from datetime import datetime
 from uuid import uuid4
 
 
-
 class BaseModel:
     """it reprsent the base  BaseModel of  hbnb work."""
 
@@ -26,7 +25,7 @@ class BaseModel:
         else:
             models.storage.new(self)
 
-    
+
     def save(self):
         """it a method that update and save the time."""
         self.updated_at = datetime.today()
