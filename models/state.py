@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""state lass."""
-
+"""Defines the State class."""
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """represent class state.
+    """Represent a state.
 
-    Attr:
-        name:it a class attribute name .
+    Attributes:
+        name (str): The name of the state.
     """
 
     name = ""
