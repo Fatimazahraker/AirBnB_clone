@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Defines  Place class."""
+"""it represent a class name place."""
 
 from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """class represent place .
+    """class place.
 
     Attr:
         city_id :  id of City.
