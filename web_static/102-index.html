@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="styles/102-common.css">
+    <link rel="stylesheet" href="styles/102-header.css">
+    <link rel="stylesheet" href="styles/102-footer.css">
+    <link rel="stylesheet" href="styles/102-filters.css">
+    <link rel="stylesheet" href="styles/102-places.css">
+    <title>AirBnB clone</title>
+  </head>
+   <body>
+    <header>
+      <div class="mobile_nav">
+        <label for="main_check" class="main_nav_burguer">|||</label>
+        <input type="checkbox" id="main_check" name="main_check" class="main_nav_check">
+          <nav>
+              <ul class="nav_bar_level1">
+                <li>
+                    <label for="second_check"><span>States</span></label>
+                    <input type="checkbox" name="second_check" id="second_check">
+                  <ul>
+                    <li><span>Arizona</span></li>
+                    <li><span>California</span></li>
+                  </ul>
+                  </li>
+                <li>
+                  <label for="third_check"><span>Amenities</span></label>
+                  <input type="checkbox" name="second_check" id="third_check">
+                  <ul>
+                    <li><span>Internet</span></li>
+                    <li><span>Tv</span></li>
+                    <li><span>Wifi</span></li>
+                    <li><span>Kitchen</span></li>
+                    <li><span>Iron</span></li>
+                  </ul>
+                  </li>
+              </ul>
+        </nav><!-- final del main_nav_bar -->
+      </div>
+    </header>
+    <div class="container">
+      <section class="filters">
+        <div class="locations">
+          <h3>States</h3>
+          <h4>California, Arizona...</h4>
+          <ul class="popover">
+            <li><h2>Arizona:</h2>
+              <ul>
+                <li>Page</li>
+                <li>Page2</li>
+              </ul>
+            </li>
+            <li><h2>California:</h2>
+              <ul>
+                <li>San Francisco</li>
+                <li>Los Altos</li>
+              </ul>
+            </li>
+            </ul>
+        </div>
+        <div class="amenities">
+          <h3>Amenities</h3>
+          <h4>Internet, Kitchen...</h4>
+          <ul class="popover">
+            <li>Internet</li>
+            <li>Tv</li>
+            <li>Kitchen</li>
+            <li>Iron</li>
+          </ul>
+        </div>
+        <button type="button" name="button">Search</button>
+      </section> <!-- end fiter-->
+
+      <section class="places">
+        <h1>Places</h1>
+        <article><!-- My home -->
+          <div class="article_places_header">
+            <h2>My home</h2>
+            <div class="price_by_night">$80</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">2 Guests</div>
+            <div class="number_rooms">1 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div><!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b>Kaitlyn Reed</p>
+          </div><!-- end user -->
+          <div class="description">
+            <p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
+          </div><!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+            </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+            </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+            </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>2 Reviews</h2>
+            <ul>
+              <li>
+                <h3>From Bob Dylan, 17th Febuary, 2023</h3>
+                <p>Nothing more i can say. 5 star!</p>
+              </li>
+              <li>
+                <h3>From Connor, 17th Febuary, 2023</h3>
+                <p>Higly recommended!</p>
+              </li>
+            </ul>
+          </div>
+        </article><!-- end My home -->
+
+        <article>
+          <h2>Tiny house</h2>
+          <div class="price_by_night">$65</div>
+          <div class="information">
+            <div class="max_guest">4 Guests</div>
+            <div class="number_rooms">2 Bedrooms</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div><!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b>Lila McAllister</p>
+          </div><!-- end user -->
+          <div class="description">
+            <p>Welcome to our cozy and charming tiny house, perfect for a unique and intimate vacation experience. Our tiny house is designed to provide all the modern amenities you need, while still maintaining a rustic and minimalist feel. The tiny house also features a private bathroom with a modern shower and toilet, as well as a small outdoor patio where you can enjoy your morning coffee or an evening glass of wine while taking in the fresh air. We look forward to welcoming you to our charming tiny house and providing you with a memorable and one-of-a-kind vacation experience.</p>
+          </div><!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+            </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>1 Review</h2>
+            <ul>
+              <li>
+                <h3>From Connor 17th Febuary 2023</h3>
+                <p>Nothing more i can say. 5 star!</p>
+              </li>
+              <li>
+                <h3>From Max the 17th Febuary 2023</h3>
+                <p>Higly recommended!</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article>
+          <h2>A suite</h2>
+          <div class="price_by_night">$190</div>
+          <div class="information">
+            <div class="max_guest">5 Guests</div>
+            <div class="number_rooms">3 Bedroom</div>
+            <div class="number_bathrooms">2 Bathroom</div>
+          </div><!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> Night</p>
+          </div><!-- end user -->
+          <div class="description">
+            <p>Escape to this cozy and secluded hideaway, nestled in the heart of a lush forest. This private retreat is the perfect place to unwind and reconnect with nature. Tucked away from the hustle and bustle of the city, you'll find complete tranquility and privacy in this charming cabin. Step outside onto the spacious deck and take in the stunning views of the surrounding forest. You'll love spending your mornings sipping coffee while watching the sun rise over the trees, and your evenings soaking in the hot tub under the stars.</p>
+          </div><!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+            </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+            </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+            </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>1 Review</h2>
+            <ul>
+              <li>
+                <h3>From Wendy the 17th Febuary, 2023</h3>
+                <p>I love this place. Amazing!</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article><!-- My home -->
+          <div class="article_places_header">
+            <h2>Cabin</h2>
+            <div class="price_by_night">$50</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">2 Guests</div>
+            <div class="number_rooms">1 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div><!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b>Evelyn Johnson</p>
+          </div><!-- end user -->
+          <div class="description">
+            <p>A cabin house is a small, rustic dwelling typically made of wood and located in a natural setting such as a forest or near a lake. provide a cozy, intimate space for relaxation and connecting with nature.</p>
+          </div><!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+            </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+            </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+            </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>2 Reviews</h2>
+            <ul>
+              <li>
+                <h3>From Cheris the 17th Febuary, 2023</h3>
+                <p>Nothing more i can say. 5 star!</p>
+              </li>
+              <li>
+                <h3>From Abel the 17th Febuary, 2023</h3>
+                <p>Higly recommended!</p>
+              </li>
+            </ul>
+          </div>
+        </article><!-- end My home -->
+
+        <article><!-- My home -->
+          <div class="article_places_header">
+            <h2>Long Island</h2>
+            <div class="price_by_night">$79</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">2 Guests</div>
+            <div class="number_rooms">1 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div><!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> Emma Johnson</p>
+          </div><!-- end user -->
+          <div class="description">
+            <p>lovely island home is a charming and picturesque living space situated on a small island surrounded by pristine waters and stunning natural beauty. The house feature an open, airy design with large windows and doors to take advantage of the incredible views and sea breeze. The interior is decorated in light, soothing colors and natural materials, to create a warm and inviting atmosphere.</p>
+          </div><!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+            </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+            </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+            </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>2 Reviews</h2>
+            <ul>
+              <li>
+                <h3>From Josh the 17th Febuary, 2023</h3>
+                <p>Nothing more i can say. 5 star!</p>
+              </li>
+              <li>
+                <h3>From Freya the 17th Febuary, 2023</h3>
+                <p>Higly recommended!</p>
+              </li>
+            </ul>
+          </div>
+        </article><!-- end My home -->
+
+        <article><!-- My home -->
+          <div class="article_places_header">
+            <h2>Demon Slayer theme</h2>
+            <div class="price_by_night">$80</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">8 Guests</div>
+            <div class="number_rooms">1 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div><!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> Haruka Nakamura</p>
+          </div><!-- end user -->
+          <div class="description">
+            <p>Demon Slayer theme house is a unique and exciting living space designed to immerse residents in the world of Demon Slayer. The interior of the house is  adorned with various elements from the series, such as posters, wall art, and decorations that depict the characters, demons, and settings from the show. Also feature specific rooms and areas themed after the different locations seen in the series, such as the Demon Slayer Corps headquarters or the forest where the first demon encounter took place. A replica of Tanjiro's sword could be on display
+A perfect place to relax, enjoy the show's themes and aesthetics, and maybe even host viewing parties with friends and family.</p>
+          </div><!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+            </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+            </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+            </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>2 Reviews</h2>
+            <ul>
+              <li>
+                <h3>From Jam the 17th Febuary, 2023</h3>
+                <p>Nothing more i can say. 5 star!</p>
+              </li>
+              <li>
+                <h3>From Kyle the 17th Febuary, 2023</h3>
+                <p>Higly recommended!</p>
+              </li>
+            </ul>
+          </div>
+        </article><!-- end My home -->
+
+        </section> <!-- end section -->
+    </div>
+    <footer>
+      <p>Best School</p>
+    </footer>
+  </body>
+</html>
