@@ -26,9 +26,9 @@ All errors are printed in `STDERR`
 Return:
 Exit status is the # of errors, 0 on Success
 """
+import os
 import sys
 import requests
-import os
 
 
 def __print_stdout(msg):
@@ -75,7 +75,7 @@ def __validate(file_path, type):
 
 
 def __analyse(file_path):
-    """Start analyse of a file and print the result
+    """Start analyse of file and print result
     """
     nb_errors = 0
     try:
@@ -129,3 +129,4 @@ if __name__ == "__main__":
     """execute tests, then exit. Exit status = # of errors (0 on success)
     """
     sys.exit(__files_loop())
+
