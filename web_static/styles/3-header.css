@@ -5,13 +5,11 @@ header {
 	border-bottom: 1px solid #CCCCCC;
 
 }
-Header:
-color: white
-height: 70px
-width: 100%
-border bottom 1px #CCCCCC
-logo align on left and center vertically (20px space at the left)
 header.logo {
-	background-image: url("../images/logo.png")
-
-
+	background-image: url("../images/logo.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	margin-right: auto;
+}
