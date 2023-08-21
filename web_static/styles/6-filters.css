@@ -1,5 +1,5 @@
 .filters {
-	color: white;
+	background-color: white;
 	height: 70px;
 	width: 100%;
 	border: 1px solid #DDDDDD;
@@ -9,7 +9,7 @@
 	align-items: center;
 	text-align: right;
 }
-.filters button{
+.filters button {
 	font-size: 18px;
 	color: white;
 	background-color: #FF5A5F;
@@ -18,40 +18,79 @@
 	border-radius: 4px;
 	width: 20%;
 	margin-right: 30px;
-	opacity: 1;
+	margin-bottom: 11px;
 }
-section .filters button:hover{
+section.filters button:hover {
 	opacity: 0.9;
 }
-.filters .amenities {
+
+.amenities {
 	height: 100%;
 	width: 25%;
+	text-align: left;
+	margin-left: 30px;
+	float: left;
 }
-.filters .locations {
+
+.locations {
 	height: 100%;
 	width: 25%;
 	border-right: 1px solid #DDDDDD;
+	text-align: left;
+	margin-left: 30px;
+	float: left;
 }
-.filters h3 {
-	font-weight = 600;
+
+.amenities h3, .locations h3 {
+	font-weight: 600;
+	margin: 0px;
+	margin-top: 17px;
+	padding: 0px;
+	padding-left: 30px;
 }
-.filters h4 {
+.amenities h4, .locations h4{
+	margin: 0px;
+	padding: 0px;
 	font-weight: 400;
 	font-size: 14px;
+	padding-left: 30px;
 }
-.filters .popover {
-	color: #FAFAFA;
-	width: 100%;
-	border: 1px solid #DDDDDD;
+.popover{
+	visiblity: hiden;
+	position: relative;
+	background-color: #FAFAFA;
+	border: solid #DDDDDD 1px;
 	border-radius: 4px;
-	display: none;
+	margin-top: 7%;
+									    padding-bottom: 10%;
+									        z-index: 1;
+									}
+									.popover li h2{
+										    padding: 0;
+										        margin: 0;
+										}
+										.popover_list{
+											    padding:0px;
+											        margin:0px;
+												    padding-left: 10%;
+											    }
+											    li{
+												        list-style-type: none;
+													    padding-bottom: 5%;
+												    }
+												    ul{
+													        padding-top: 30px;
+													}
+													.locations:hover >.popover{
+														    visibility: visible;
+														        margin-bottom: 50px;
+														}
 
-}
-h2 {
-	font-size: 16px;
-}
+														.amenities:hover > .popover{
+															    visibility: visible;
+														    }
 
-.filters .locations:hover .popover,
-.filters .amenities:hover .popover {
-	    display: block;
-    }
+
+														    ul {
+															      list-style: none;
+														      
