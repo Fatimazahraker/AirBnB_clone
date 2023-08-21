@@ -9,7 +9,7 @@
 	align-items: center;
 	text-align: right;
 }
-.filters button{
+.filters button {
 	font-size: 18px;
 	color: white;
 	background-color: #FF5A5F;
@@ -20,14 +20,14 @@
 	margin-right: 30px;
 	opacity: 1;
 }
-section.filters button:hover{
+section .filters button:hover {
 	opacity: 0.9;
 }
-.filters.amenities {
+.filters .amenities {
 	height: 100%;
 	width: 25%;
 }
-.filters.locations {
+.filters .locations {
 	height: 100%;
 	width: 25%;
 	border-right: 1px solid #DDDDDD;
