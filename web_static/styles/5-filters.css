@@ -1,5 +1,5 @@
 .filters {
-	color: white;
+	background-color: white;
 	height: 70px;
 	width: 100%;
 	border: 1px solid #DDDDDD;
@@ -18,25 +18,40 @@
 	border-radius: 4px;
 	width: 20%;
 	margin-right: 30px;
-	opacity: 1;
+	margin-bottom: 11px;
 }
-section .filters button:hover {
+section.filters button:hover {
 	opacity: 0.9;
 }
-.filters .amenities {
+
+.amenities {
 	height: 100%;
 	width: 25%;
+	text-align: left;
+	margin-left: 30px;
+	float: left;
 }
-.filters .locations {
+
+.locations {
 	height: 100%;
 	width: 25%;
 	border-right: 1px solid #DDDDDD;
+	text-align: left;
+	margin-left: 30px;
+	float: left;
 }
-.filters h3 {
+
+h3 {
 	font-weight = 600;
+	margin: 0px;
+	margin-top: 17px;
+	padding: 0px;
 }
-.filters h4 {
+
+h4 {
 	font-weight: 400;
 	font-size: 14px;
+	margin: 0px;
+	padding: 0px
 }
 
